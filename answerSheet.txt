@@ -1,0 +1,65 @@
+1. question1.py
+
+2. question2.c
+
+
+   explanation:
+
+   The results I have been getting from running the c file have been fairly consistent. 
+   The Static and Stack functions are closer in time, with static yielding usually between .000100 - .000200 seconds, and the stack function .000300-.000500 second range.
+   The heap function tends to take a little longer and yields consistently in the realm of .4 seconds.
+   The static function is the clear winner as far as speed is concerned. Each time the program is compiled, static is faster than the others. 
+   According to our text book, static arrays are more efficient, because no dynamic or deallocation is required. All storage allocation is done before runtime.
+   We see this in action with the results of the static array beating out stack and heap as far as speed and efficiency is concerned. 
+   There are pros and cons to stack and heap dynamic arrays. The pros of stack in comparison to static is the efficiency of space. 
+   The pros of heap in comparison to static is the heap dynamic array's flexibility. The disadvantages of stack and heap dynamic arrays is allocation time for both. 
+   Hence, the static array will be faster than the other two. 
+
+3.  
+
+    <start> ==> <function_a>
+    <function_a> ==> <function_a> "+" <function_b> | <function_a> "-" <function_b> | <function_b>
+    <function_b> ==> <function_b> "*" <function_c> | <function_b> "/" <function_c> | <function_b> "%" <function_c> | <function_c>
+    <function_c> ==> <INT> | "(" <start> ")"
+
+    The type of parsing to be used in this example would be top-down. More specifically, a recursive descent parsing technique would be appropriate.
+    Recursive descent parsing is a type of top-down parsing method which will begin with the non-terminal on the left and go to the right.
+    We use this parsing technique as we start with the <start>, work our way right to the <function_a>. This pattern will continue as we parse our way to the subsequent lines of the grammar.
+
+    Reference: https://www.geeksforgeeks.org/recursive-descent-parser/
+
+4. 
+
+In the compilation process, we first need to recognize the scoping of the program by analyzing declared variables and the organization in which they are initialized. 
+For example, the compiler will be able to tell the difference between a variable declared outside a function versus a variable declared inside of a function. 
+Once the compiler finds this, it will organize it in a structure similar to a parse tree. 
+Therefore, it is more efficient to differentiate the scopes of the program.  
+
+Static scoping is when the scope of a variable can be determined prior to executing. 
+So, the only variables that are referenced are the ones that are initialized and declared in the static reference environment, and referencing those of dynamic origin are not possible.  
+On the other hand, dynamic scoping requires the execution of a sequence of subprograms, and can only be determined at runtime. 
+Therefore, if the program is scoped dynamically, then all the variables of the enviorenment would be the same as the are in the subprograms.
+
+Reference: Textbook
+
+
+5. 
+
+In order to add reserve words to the lexical analyzing problem, I would create a dictionary and set each key with its corresponding value reserve word.
+Then, a function would be created to check for any instances of reserve words in the text file. The condition for a found reserve word would return the values of all the reserve words that were found in the analyzer.
+In the case of allowing users to choose their own reserve words, I would write a function that prompts the user to input the amount of reserve words they desire, and to name each reserve word. 
+Each reserve word would be appended to a dictionary or list similar to the method mentioned above. 
+
+6. question6.py
+
+7. 
+
+There a few options to accomplish this. One way would be a if-else-elseif conditional statement. 
+In my opinion, this would be messy and not be as efficient as a switch case statement.
+Switch case statements would be a better option in this scenario for a couple of different reasons. 
+The main reason that I care about is the readability. 
+Using a switch case would look a lot cleaner and easier to read, which would be advantageos in this problem where there are already a number of other conditional statements.
+
+8. question8.pl
+
+
