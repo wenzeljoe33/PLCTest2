@@ -20,36 +20,25 @@ int main(void){
    int length = 100001;
    double amountOfTime;
    clock_t pointA, pointB;
-   
    pointA = clock();
    for (i = 0; i < length; i++){
        myStaticFunction();
    }
    pointB = clock();
-   
    amountOfTime = ((double) (pointB - pointA)) / CLOCKS_PER_SEC;
    printf("myStaticFunction: %f seconds \n", amountOfTime); 
-   
    pointA = clock();
    for (i = 0; i < length; i++){
        myHeapFunction();
    }
    pointB = clock();
-   
    amountOfTime = ((double) (pointB - pointA)) / CLOCKS_PER_SEC;
-   printf("myHeapFunction: %f seconds \n", amountOfTime); 
-
+   printf("myHeapFunction: %f seconds \n", amountOfTime);
    pointA = clock();
-
    for (i = 0; i < length; i++){
        myStackFunction();
    }
    pointB = clock();
-
    amountOfTime = ((double) ((pointB - pointA)) / CLOCKS_PER_SEC);
    printf("myStackFunction: %f seconds \n", amountOfTime); 
 }
-
-
-
-
